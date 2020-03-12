@@ -4,9 +4,8 @@ const Register = ({ handleSumbit }) => {
   const [form, setForm] = useState({});
 
   const handleInputChange = (evt) => {
-    const { target: { name, value } } = evt;
-
-    setForm({ [name]: value, ...form });
+    const { target: { name, value } } = evt;    
+    setForm({ ...form, [name]: value });
   }
 
   const sendForm = (evt) => {

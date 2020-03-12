@@ -1,32 +1,33 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => (
-  <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-hrefp">
+  <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div className="container">
-      <a className="navbar-brand" href="/">Ecommerce MedJS</a>
-      <buthrefn className="navbar-hrefggler" type="buthrefn" data-hrefggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="hrefggle navigation">
-        <span className="navbar-hrefggler-icon"></span>
-      </buthrefn>
+      <Link className="navbar-brand" to="/">Ecommerce MedJS</Link>
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
       <div className="collapse navbar-collapse" id="navbarResponsive">
-        <ul className="navbar-nav ml-auhref">
+        <ul className="navbar-nav ml-auto">
           <li className="nav-item active">
-            <a className="nav-a" href="/">Home
+            <Link className="nav-link" to="/">Home
               <span className="sr-only">(current)</span>
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-a" href="/register">Register</a>
+            <Link className="nav-link" to="/register">Register</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-a" href="/login">Login</a>
+            <Link className="nav-link" to="/login">Login</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-a" href="https://medellinjs.org" target="_blank" rel="noopener noreferrer">Contact</a>
+            <a className="nav-link" href="https://medellinjs.org" target="_blank" rel="noopener noreferrer">Contact</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-);
+)
 
-export default Header;
+export default Header

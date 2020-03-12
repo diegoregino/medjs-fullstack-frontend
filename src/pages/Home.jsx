@@ -24,10 +24,10 @@ const Home = () => {
     getProducts(setProducts);
   }, []);
 
-  const productsList = products.map((product) => 
-    <div className="col-lg-4 col-md-6 mb-4">
-      <Product {...product} />
-    </div>
+  const productsList = products.map((product) => (
+    <div key={product._id} className="col-lg-4 col-md-6 mb-4">
+      <Product  {...product} />
+    </div>)
   )
 
   return (
